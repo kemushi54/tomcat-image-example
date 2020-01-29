@@ -1,5 +1,6 @@
 FROM java
 MAINTAINER jack
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
 RUN apt-get update
 RUN apt-get install -y wget
 
